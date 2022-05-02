@@ -1,13 +1,13 @@
-import useSWR from 'swr';
+import { people } from './api/data';
 import Person from '../components/Person';
 
-export default function Persons({ data }) {
+export default function Persons({ people }) {
   return (
     <>
       <p>Calling API as Server-Side Rendering</p>
 
       <div className="grid">
-        {data.map((p, i) => (
+        {people.map((p, i) => (
           <Person key={i} person={p} />
         ))}
       </div>
@@ -16,9 +16,5 @@ export default function Persons({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/people');
-  const data = await res.json();
-
-  // Pass data to the page via props
-  return { props: { data } };
+  return { props: { people } };
 }
