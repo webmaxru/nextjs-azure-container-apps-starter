@@ -1,35 +1,44 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import styles from '../styles/Layout.module.css';
+import Link from 'next/link';
 
 export default function Layout({ children }) {
   return (
-    <>
+    <div className={styles.container}>
       <Head>
-        <title>Azure Container App</title>
+        <title>Next.js on Azure Container Apps Starter</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js</a> on Azure Container
-          Apps!
-        </h1>
+      <header className={styles.header}>
+        <h2>
+          <Link href="/">Next.js Azure Container Apps Starter</Link>
+        </h2>
+      </header>
 
-        {children}
-      </main>
+      <main className={styles.main}>{children}</main>
 
-      <footer>
+      <footer className={styles.footer}>
+        Created by&nbsp;
+        <a href="https://twitter.com/webmaxru">Maxim Salnikov</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/webmaxru/nextjs-azure-container-apps-starter">
+          Fork on GutHub
+        </a>
+        &nbsp;|&nbsp;
         <a
-          href="https://docs.microsoft.com/en-us/azure/container-apps/deploy-visual-studio-code"
+          href="https://aka.ms/learn-aca"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by&nbsp;
           <img
             src="/favicon.png"
             alt="Azure Container Apps"
+            className={styles.logo}
           />
         </a>
       </footer>
-    </>
+    </div>
   );
 }
