@@ -1,23 +1,40 @@
-# Basic API routes example
+# Node.js on Azure Container Apps Starter
 
-Next.js ships with [API routes](https://nextjs.org/docs/api-routes/introduction) which provides an easy solution to build your own `API`. This example shows how to create multiple `API` endpoints with serverless functions, which can execute independently.
+[Azure Container Apps](https://azure.microsoft.com/en-us/services/container-apps/) is a fully managed serverless container service for building and deploying modern apps at scale.
 
-## Deploy your own
+It's a perfect choice for hosting fullstack web applications with a server-side rendered components like Next.js or Remix.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/api-routes)
+## How to scaffold an Azure Container App
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/api-routes&project-name=api-routes&repository-name=api-routes)
+1. [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+2. Install `containerapp` extension of the Azure CLI
 
 ```bash
-npx create-next-app --example api-routes api-routes-app
-# or
-yarn create next-app --example api-routes api-routes-app
-# or
-pnpm create next-app -- --example api-routes api-routes-app
+az extension add --name containerapp --upgrade
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+3. Clone and deploy this starter as an Azure Container App with the name of your choice (`nextjs-aca` in the example below):
+
+```bash
+az containerapp up --name nextjs-aca --source .
+```
+
+## How to deploy a new version
+
+Use the same command to deploy a new version:
+
+```bash
+az containerapp up --name nextjs-aca --source .
+```
+
+## About
+
+### Credits
+
+- Dockerfile is based on [with-docker example](https://github.com/vercel/next.js/tree/canary/examples/with-docker)
+- API call is based on [api-routes example](https://github.com/vercel/next.js/tree/canary/examples/api-routes)
+
+### Author
+
+[Maxim Salnikov](https://twitter.com/webmaxru). Feel free to contact me if you have any questions about the project, Azure, Azure Container Apps, Azure Static Web Apps.

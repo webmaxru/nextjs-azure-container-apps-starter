@@ -1,19 +1,10 @@
 import useSWR from 'swr';
 import Link from 'next/link';
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
-
 export default function Index() {
-  const { data, error } = useSWR('/api/people', fetcher);
-
-  if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
-
   return (
     <>
-      <p>
-        Documentation
-      </p>
+      <p>Documentation</p>
 
       <div className="grid">
         <a href="https://nextjs.org/docs" className="card">
@@ -29,6 +20,15 @@ export default function Index() {
           <p>Read more about multi-stage builds</p>
         </a>
 
+
+        <a
+          href="https://nextjs.org/docs/advanced-features/output-file-tracing#automatically-copying-traced-files-experimental"
+          className="card"
+        >
+          <h3>Auto copying traced files &rarr;</h3>
+          <p>Read more about outputStandalone feature</p>
+        </a>
+
         <a
           href="https://docs.microsoft.com/en-us/azure/container-apps/deploy-visual-studio-code"
           className="card"
@@ -41,9 +41,7 @@ export default function Index() {
         </a>
       </div>
 
-      <p>
-        Calling API in different modes
-      </p>
+      <p>Calling API in different modes</p>
 
       <div className="grid">
         <Link href="/persons-ajax">
