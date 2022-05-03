@@ -1,8 +1,12 @@
-# Node.js on Azure Container Apps Starter
+# Next.js on Azure Container Apps Starter
 
 [Azure Container Apps](https://azure.microsoft.com/en-us/services/container-apps/) is a fully managed serverless container service for building and deploying modern apps at scale.
 
-It's a perfect choice for hosting fullstack web applications with a server-side rendered components like Next.js or Remix.
+It's a perfect choice for hosting fullstack web applications with a server-side rendered components like [Next.js](https://nextjs.org/) or [Remix](https://remix.run/).
+
+This project is a minimalistic (but including Next.js essentials like Layout, Style Components, SG, SSR, SWR) example of a Next.js app running on Azure Container Apps.
+
+It uses [Dockerfile](https://github.com/webmaxru/nextjs-azure-container-apps-starter/blob/main/Dockerfile) with multi-stage builds and automatically copied traced files via [outputStandalone](https://github.com/webmaxru/nextjs-azure-container-apps-starter/blob/main/next.config.js#L3) feature of Next.js to keep image size as small as possible.
 
 ## How to scaffold an Azure Container App
 

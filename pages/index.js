@@ -1,25 +1,34 @@
-import useSWR from 'swr';
 import Link from 'next/link';
 
 export default function Index() {
   return (
     <>
-      <p>Documentation</p>
+      <p>Features used in this starter</p>
 
       <div className="grid">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
+        <a
+          href="https://github.com/webmaxru/nextjs-azure-container-apps-starter"
+          className="card"
+        >
+          <h3>This project on GitHub &rarr;</h3>
+          <p>Start with forking this project</p>
         </a>
 
         <a
-          href="https://docs.docker.com/develop/develop-images/multistage-build/#name-your-build-stages"
+          href="https://docs.microsoft.com/en-us/azure/container-apps/overview"
+          className="card"
+        >
+          <h3>Azure Container Apps &rarr;</h3>
+          <p>Fully-managed, serverless platform for running containers</p>
+        </a>
+
+        <a
+          href="https://docs.docker.com/develop/develop-images/multistage-build/"
           className="card"
         >
           <h3>Multi-stage Dockerfile &rarr;</h3>
-          <p>Read more about multi-stage builds</p>
+          <p>Keeping images small, and easy to read and maintain</p>
         </a>
-
 
         <a
           href="https://nextjs.org/docs/advanced-features/output-file-tracing#automatically-copying-traced-files-experimental"
@@ -28,20 +37,32 @@ export default function Index() {
           <h3>Auto copying traced files &rarr;</h3>
           <p>Read more about outputStandalone feature</p>
         </a>
+      </div>
 
+      <p>Azure Container Apps tooling</p>
+
+      <div className="grid">
         <a
-          href="https://docs.microsoft.com/en-us/azure/container-apps/deploy-visual-studio-code"
+          href="https://techcommunity.microsoft.com/t5/apps-on-azure-blog/simplify-azure-container-apps-deployments-with-quot-az/ba-p/3298436"
           className="card"
         >
-          <h3>Deploy &rarr;</h3>
+          <h3>containerapp extension of Azure CLI &rarr;</h3>
           <p>
-            Instantly deploy your Next.js site to a public URL with Azure
-            Container Apps.
+            Streamline the process of deploying to Azure Container Apps in a
+            single command
           </p>
+        </a>
+
+        <a
+          href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurecontainerapps"
+          className="card"
+        >
+          <h3>VS Code extension &rarr;</h3>
+          <p>Create and deploy your Container Apps from the IDE</p>
         </a>
       </div>
 
-      <p>Calling API in different modes</p>
+      <p>Calling API in different modes (will be used in next iterations)</p>
 
       <div className="grid">
         <Link href="/persons-ajax">
