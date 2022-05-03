@@ -6,7 +6,7 @@
 
 [Azure Container Apps](https://azure.microsoft.com/en-us/services/container-apps/) is a fully managed serverless container service for building and deploying modern apps at scale.
 
-It's a perfect choice for hosting fullstack web applications with a server-side rendered components like [Next.js](https://nextjs.org/) or [Remix](https://remix.run/).
+It's a perfect choice for hosting fullstack web applications with server-side rendered components like [Next.js](https://nextjs.org/) or [Remix](https://remix.run/).
 
 This project is a minimalistic (but including Next.js essentials like Layout, Style Components, SG, SSR, SWR) example of a Next.js app running on Azure Container Apps.
 
@@ -14,7 +14,7 @@ It uses [Dockerfile](https://github.com/webmaxru/nextjs-azure-container-apps-sta
 
 ## How to scaffold an Azure Container App
 
-0. [Claim your free Azure credits] if needed(https://aka.ms/free-azure-pass)
+0. [Claim your free Azure credits](https://aka.ms/free-azure-pass) if needed
 
 1. [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
 
