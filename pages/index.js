@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Index() {
   return (
     <>
-      <p>Features used in this starter</p>
+      <p>Technologies used in this project</p>
 
       <div className="grid">
         <a
@@ -11,7 +11,7 @@ export default function Index() {
           className="card"
         >
           <h3>This project on GitHub &rarr;</h3>
-          <p>Start with forking this project</p>
+          <p>Info about scaffolding and deploying</p>
         </a>
 
         <a
@@ -34,8 +34,8 @@ export default function Index() {
           href="https://nextjs.org/docs/advanced-features/output-file-tracing#automatically-copying-traced-files-experimental"
           className="card"
         >
-          <h3>Auto copying traced files &rarr;</h3>
-          <p>Read more about outputStandalone feature</p>
+          <h3>Copying traced files &rarr;</h3>
+          <p>Read more about outputStandalone feature of Next.js</p>
         </a>
       </div>
 

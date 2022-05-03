@@ -6,13 +6,13 @@ export default function Layout({ children }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Next.js on Azure Container Apps Starter</title>
+        <title>Next.js on Azure Container Apps starter</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
 
       <header className={styles.header}>
         <h2>
-          <Link href="/">Next.js Azure Container Apps Starter</Link>
+          <Link href="/">Next.js on Azure Container Apps starter</Link>
         </h2>
       </header>
 
